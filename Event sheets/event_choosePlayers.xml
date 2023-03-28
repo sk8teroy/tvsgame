@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>event_choosePlayers</name>
+    <events>
+        <variable constant="0" name="player1_char" sid="325311700572442" static="0" type="number">0</variable>
+        <event-block sid="948947862308470">
+            <conditions>
+                <condition id="17" name="On tap object" sid="507477982957041" type="Touch">
+                    <param id="0" name="Object">sprite_font_custom</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="771973713684754" type="sprite_font_custom">
+                    <param id="0" name="Unique ID">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="308970042411926" type="System">
+                    <param id="0" name="Variable">player1_char</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="652831285251989" type="System">
+                    <param id="0" name="Layout">choosePlayer2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="915686958914856">
+            <conditions>
+                <condition id="17" name="On tap object" sid="161088163949128" type="Touch">
+                    <param id="0" name="Object">blank</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="366678041323805" type="System">
+                    <param id="0" name="Variable">player1_char</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="308800845733294" type="System">
+                    <param id="0" name="Layout">choosePlayer2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

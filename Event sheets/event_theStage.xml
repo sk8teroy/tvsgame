@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>event_theStage</name>
+    <events>
+        <variable constant="0" name="isPlayerTwoDead" sid="147009664434483" static="0" type="number">0</variable>
+        <variable constant="0" name="isPlayerOneDead" sid="470555016809765" static="0" type="number">0</variable>
+        <event-block sid="194785375141119">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="659898503710958" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="763637624581751" type="the_head">
+                    <param id="0" name="Frame number">player1_char</param>
+                </action>
+                <action id="5" name="Set frame" sid="127559796036363" type="the_head2">
+                    <param id="0" name="Frame number">player2_char</param>
+                </action>
+                <action behavior="CustomMovement" id="12" name="Set enabled" sid="553241726612595" type="sprite2sheet">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="459280879410093" type="sprite2sheet">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">50</param>
+                </action>
+                <action behavior="CustomMovement" id="3" name="Accelerate" sid="757997644273045" type="sprite2sheet">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Acceleration">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="248074358553002">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="132884746004753" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="773947772459751" type="Player1Hp">
+                    <param id="0" name="Text">Player1Hp.player1_hp</param>
+                </action>
+                <action id="0" name="Set text" sid="109254577847667" type="Player2Hp">
+                    <param id="0" name="Text">Player2Hp.player2_hp</param>
+                </action>
+                <action id="0" name="Set text" sid="353746043193335" type="sprite_font_hp">
+                    <param id="0" name="Text">Player2Hp.player2_hp</param>
+                </action>
+                <action id="0" name="Set text" sid="533017708419697" type="sprite_font_hp2">
+                    <param id="0" name="Text">Player1Hp.player1_hp</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="332404110697438">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="435867499818514" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="838586366242784" type="sprite2sheet">
+                    <param id="0" name="Y">137</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="476992733521505">
+            <conditions>
+                <condition id="17" name="On tap object" sid="164414862565605" type="Touch">
+                    <param id="0" name="Object">power1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="833200961480559" type="power1">
+                    <param id="0" name="Instance variable">playernum</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="533063310527754" type="player_gre">
+                    <param id="0" name="Unique ID">1</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="504924433561230" type="player_gre">
+                    <param id="0" name="Instance variable">isDead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="192321669381058" type="Player1Hp">
+                    <param id="0" name="Instance variable">player1_hp</param>
+                    <param id="1" name="Value">power1.damage</param>
+                </action>
+                <action id="4" name="Set animation" sid="793971194693333" type="player_gre">
+                    <param id="0" name="Animation">power1.animation</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="107990667461278">
+            <conditions>
+                <condition id="3" name="On touched object" sid="787464371774646" type="Touch">
+                    <param id="0" name="Object">power2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="598836955671944" type="power2">
+                    <param id="0" name="Instance variable">playernum</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="415739842575686" type="player_gre">
+                    <param id="0" name="Unique ID">1</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="409093266620642" type="player_gre">
+                    <param id="0" name="Instance variable">isDead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="565775880747710" type="Player1Hp">
+                    <param id="0" name="Instance variable">player1_hp</param>
+                    <param id="1" name="Value">power2.damage</param>
+                </action>
+                <action id="4" name="Set animation" sid="651911610714523" type="player_gre">
+                    <param id="0" name="Animation">power2.animation</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="121058838974398">
+            <conditions>
+                <condition id="17" name="On tap object" sid="854563484414038" type="Touch">
+                    <param id="0" name="Object">power1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="714276854298127" type="power1">
+                    <param id="0" name="Instance variable">playernum</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="781500358444107" type="player_gre">
+                    <param id="0" name="Unique ID">48</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="840760012071613" type="player_gre">
+                    <param id="0" name="Instance variable">isDead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="855957619518336" type="Player2Hp">
+                    <param id="0" name="Instance variable">player2_hp</param>
+                    <param id="1" name="Value">power1.damage</param>
+                </action>
+                <action id="4" name="Set animation" sid="890068786447733" type="player_gre">
+                    <param id="0" name="Animation">power1.animation</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="419252412181762">
+            <conditions>
+                <condition id="17" name="On tap object" sid="706990690564046" type="Touch">
+                    <param id="0" name="Object">power2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="220999091853172" type="power2">
+                    <param id="0" name="Instance variable">playernum</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="446465318184454" type="player_gre">
+                    <param id="0" name="Unique ID">48</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="647023818424288" type="player_gre">
+                    <param id="0" name="Instance variable">isDead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="511240657050927" type="Player2Hp">
+                    <param id="0" name="Instance variable">player2_hp</param>
+                    <param id="1" name="Value">power2.damage</param>
+                </action>
+                <action id="4" name="Set animation" sid="763071741329376" type="player_gre">
+                    <param id="0" name="Animation">power2.animation</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="828219801917932">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="699149846289581" type="Player1Hp">
+                    <param id="0" name="Instance variable">player1_hp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="783698806196250" type="player_gre">
+                    <param id="0" name="Unique ID">48</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="803614877636933" type="player_gre">
+                    <param id="0" name="Instance variable">isDead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="492828960602854" type="player_gre">
+                    <param id="0" name="Animation">&quot;die&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="797014633787494" type="player_gre">
+                    <param id="0" name="Instance variable">isDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="539641710918829">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="852253519418105" type="Player2Hp">
+                    <param id="0" name="Instance variable">player2_hp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="513301307819870" type="player_gre">
+                    <param id="0" name="Unique ID">1</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="976025311146929" type="player_gre">
+                    <param id="0" name="Instance variable">isDead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="897246398037115" type="player_gre">
+                    <param id="0" name="Animation">&quot;die&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="286300076246663" type="player_gre">
+                    <param id="0" name="Instance variable">isDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="979217959327146">
+            <conditions>
+                <condition id="5" name="On any finished" sid="468317708797243" type="player_gre" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="317062399249169">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="792355424266341" type="Player1Hp">
+                            <param id="0" name="Instance variable">player1_hp</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="477162837379446" type="player_gre">
+                            <param id="0" name="Unique ID">48</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="109922865532596" type="player_gre">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="605065839771083">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="486365891193688" type="Player2Hp">
+                            <param id="0" name="Instance variable">player2_hp</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="106908691154982" type="player_gre">
+                            <param id="0" name="Unique ID">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="619722825362661" type="player_gre">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="661855690220122">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="575625467620115" type="player_gre">
+                    <param id="0" name="Object">player_gre</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="686831230874236" type="player_gre">
+                    <param id="0" name="Unique ID">48</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="278343381848784" type="player_gre">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="277287705425867">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="859825983494623" type="player_gre">
+                    <param id="0" name="Object">player_gre</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="236618122695864" type="player_gre">
+                    <param id="0" name="Unique ID">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="160945627370346" type="player_gre">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
