@@ -179,23 +179,35 @@
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="783698806196250" type="player_gre">
-                    <param id="0" name="Unique ID">48</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="803614877636933" type="player_gre">
-                    <param id="0" name="Instance variable">isDead</param>
-                </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="492828960602854" type="player_gre">
-                    <param id="0" name="Animation">&quot;die&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="797014633787494" type="player_gre">
-                    <param id="0" name="Instance variable">isDead</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-10" name="Set value" sid="755083429923645" type="Player1Hp">
+                    <param id="0" name="Instance variable">player1_hp</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="586089041733500">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="527651383777289" type="player_gre">
+                            <param id="0" name="Unique ID">48</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="115886980526491" type="player_gre">
+                            <param id="0" name="Instance variable">isDead</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="338598796147683" type="player_gre">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="873860176911346" type="player_gre">
+                            <param id="0" name="Animation">&quot;die&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="539641710918829">
             <conditions>
@@ -204,23 +216,35 @@
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="513301307819870" type="player_gre">
-                    <param id="0" name="Unique ID">1</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="976025311146929" type="player_gre">
-                    <param id="0" name="Instance variable">isDead</param>
-                </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="897246398037115" type="player_gre">
-                    <param id="0" name="Animation">&quot;die&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="286300076246663" type="player_gre">
-                    <param id="0" name="Instance variable">isDead</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-10" name="Set value" sid="410396337082215" type="Player2Hp">
+                    <param id="0" name="Instance variable">player2_hp</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="860029200833398">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="836226138496713" type="player_gre">
+                            <param id="0" name="Unique ID">1</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="764613026096948" type="player_gre">
+                            <param id="0" name="Instance variable">isDead</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="401843249320751" type="player_gre">
+                            <param id="0" name="Instance variable">isDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="775582342813719" type="player_gre">
+                            <param id="0" name="Animation">&quot;die&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="979217959327146">
             <conditions>
