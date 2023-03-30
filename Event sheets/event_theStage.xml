@@ -295,19 +295,42 @@
                 <condition id="0" name="On collision with another object" sid="575625467620115" type="player_gre">
                     <param id="0" name="Object">player_gre</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="686831230874236" type="player_gre">
-                    <param id="0" name="Unique ID">48</param>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="156208721408744" type="player_gre">
+                    <param id="0" name="Instance variable">isDead</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="278343381848784" type="player_gre">
-                    <param id="0" name="Object">Particles</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="507522391786303">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="686831230874236" type="player_gre">
+                            <param id="0" name="Unique ID">48</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="278343381848784" type="player_gre">
+                            <param id="0" name="Object">Particles</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="214883938193244">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="791108153296957" type="player_gre">
+                            <param id="0" name="Unique ID">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="486372483178125" type="player_gre">
+                            <param id="0" name="Animation">&quot;hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
-        <event-block sid="277287705425867">
+        <event-block disabled="1" sid="277287705425867">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="859825983494623" type="player_gre">
                     <param id="0" name="Object">player_gre</param>

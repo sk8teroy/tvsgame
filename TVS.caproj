@@ -733,21 +733,25 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.193846" y="0.342444" />
+                    </frame>
                 </animation>
                 <animation framecount="5" loop="0" name="blow" pingpong="1" repeatcount="1" repeatto="0" sid="604554586024986" speed="30">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.129231" y="0.16881" />
+                    </frame>
                 </animation>
                 <animation framecount="5" loop="0" name="fatal" pingpong="1" repeatcount="1" repeatto="0" sid="588915256131644" speed="30">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.16" hotspotY="0.667203" />
                 </animation>
                 <animation framecount="5" loop="0" name="die" pingpong="0" repeatcount="1" repeatto="0" sid="478300890436828" speed="30">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -755,6 +759,13 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="5" loop="0" name="hit" pingpong="1" repeatcount="1" repeatto="0" sid="984524369774783" speed="50">
+                    <frame duration="1" hotspotX="0.50077" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.50077" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.50077" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.50077" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.50077" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

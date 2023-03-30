@@ -12,10 +12,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">choosePlayers</layout>
         <layout order="2">choosePlayer2</layout>
-        <layout order="4">theStage</layout>
+        <layout active="1" order="4">theStage</layout>
         <event-sheet order="1">event_choosePlayers</event-sheet>
         <event-sheet order="3">event_choosePlayer2</event-sheet>
-        <event-sheet active="1" order="5">event_theStage</event-sheet>
+        <event-sheet order="5">event_theStage</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
