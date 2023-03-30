@@ -20,6 +20,7 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
@@ -751,7 +752,9 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.16" hotspotY="0.667203" />
+                    <frame duration="1" hotspotX="0.475385" hotspotY="0.503215">
+                        <image-point name="Imagepoint 1" x="0.153846" y="0.702572" />
+                    </frame>
                 </animation>
                 <animation framecount="5" loop="0" name="die" pingpong="0" repeatcount="1" repeatto="0" sid="478300890436828" speed="30">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -847,6 +850,24 @@
         <object-type name="Particles" sid="989926831547351">
             <plugin id="Particles" />
             <texture />
+        </object-type>
+        <object-type name="hit_effect" sid="992440351879311">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="231767711881638">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="932151175398477" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

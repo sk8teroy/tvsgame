@@ -308,12 +308,35 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="278343381848784" type="player_gre">
+                        <action disabled="1" id="0" name="Spawn another object" sid="958749622092949" type="player_gre">
                             <param id="0" name="Object">Particles</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="614646302105521">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="894739945413412" type="player_gre">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="763813152477481" type="player_gre">
+                                    <param id="0" name="Animation">&quot;hit&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="782780455477975" type="hit_effect">
+                                    <param id="0" name="Frame number">round(random(0,6))</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="648457675471054" type="hit_effect" />
+                                <action id="-3" name="Set position" sid="368498851489547" type="hit_effect">
+                                    <param id="0" name="X">player_gre.X + round(random(-player_gre.Width*0.1,player_gre.Width*0.1))</param>
+                                    <param id="1" name="Y">player_gre.Y + round(random(-player_gre.Height*0.1,player_gre.Height*0.1))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="214883938193244">
                     <conditions>
@@ -321,12 +344,30 @@
                             <param id="0" name="Unique ID">1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="486372483178125" type="player_gre">
-                            <param id="0" name="Animation">&quot;hit&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="213021480014289">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="909566386870196" type="player_gre">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="277791263607415" type="player_gre">
+                                    <param id="0" name="Animation">&quot;hit&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="764064401559934" type="hit_effect">
+                                    <param id="0" name="Frame number">round(random(0,6))</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="909242073891751" type="hit_effect" />
+                                <action id="-3" name="Set position" sid="440006059296792" type="hit_effect">
+                                    <param id="0" name="X">player_gre.X + round(random(-player_gre.Width*0.1,player_gre.Width*0.1))</param>
+                                    <param id="1" name="Y">player_gre.Y + round(random(-player_gre.Height*0.1,player_gre.Height*0.1))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
