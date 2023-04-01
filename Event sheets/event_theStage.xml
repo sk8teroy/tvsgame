@@ -60,6 +60,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="496549925833502">
+            <conditions>
+                <condition id="17" name="On tap object" sid="149394117193949" type="Touch">
+                    <param id="0" name="Object">restart_btn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="885434964050043" type="System" />
+            </actions>
+        </event-block>
         <event-block sid="476992733521505">
             <conditions>
                 <condition id="17" name="On tap object" sid="164414862565605" type="Touch">
@@ -308,7 +318,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Spawn another object" sid="958749622092949" type="player_gre">
+                        <action id="0" name="Spawn another object" sid="958749622092949" type="player_gre">
                             <param id="0" name="Object">Particles</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">1</param>
@@ -370,23 +380,6 @@
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block disabled="1" sid="277287705425867">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="859825983494623" type="player_gre">
-                    <param id="0" name="Object">player_gre</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="236618122695864" type="player_gre">
-                    <param id="0" name="Unique ID">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="160945627370346" type="player_gre">
-                    <param id="0" name="Object">Particles</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-            </actions>
         </event-block>
     </events>
 </c2eventsheet>

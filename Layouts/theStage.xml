@@ -189,7 +189,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <player1_hp>500</player1_hp>
+                        <player1_hp>1000</player1_hp>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -581,7 +581,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <player2_hp>500</player2_hp>
+                        <player2_hp>1000</player2_hp>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -648,7 +648,7 @@
                         <character-height>55</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>TVS FIGHTING CHAMPIONSHIP</text>
-                        <scale>1</scale>
+                        <scale>0.9</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -660,7 +660,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>116</x>
+                        <x>103</x>
                         <y>10</y>
                         <z>0</z>
                         <width>454</width>
@@ -710,8 +710,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>288</x>
-                        <y>497</y>
+                        <x>301</x>
+                        <y>488</y>
                         <z>0</z>
                         <width>-460.620300293</width>
                         <height>473</height>
@@ -1030,6 +1030,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="restart_btn" uid="96">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>609</x>
+                        <y>58</y>
+                        <z>0</z>
+                        <width>125.556602478</width>
+                        <height>117.41318512</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.500630498</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
