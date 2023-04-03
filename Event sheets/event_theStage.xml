@@ -60,6 +60,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block disabled="1" sid="466519277992788">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="934856118183787" type="System">
+                    <param id="0" name="Interval (seconds)">10.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="291487545692054" type="System" />
+            </actions>
+        </event-block>
         <event-block sid="496549925833502">
             <conditions>
                 <condition id="17" name="On tap object" sid="149394117193949" type="Touch">
