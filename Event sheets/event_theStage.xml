@@ -10,11 +10,11 @@
                 <condition id="-2" name="On start of layout" sid="659898503710958" type="System" />
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="763637624581751" type="the_head">
-                    <param id="0" name="Frame number">player1_char</param>
+                <action id="5" name="Set frame" sid="763637624581751" type="healthbar_head1">
+                    <param id="0" name="Frame number">p1_char</param>
                 </action>
-                <action id="5" name="Set frame" sid="127559796036363" type="the_head2">
-                    <param id="0" name="Frame number">player2_char</param>
+                <action id="5" name="Set frame" sid="127559796036363" type="healthbar_head2">
+                    <param id="0" name="Frame number">p2_char</param>
                 </action>
                 <action behavior="CustomMovement" id="12" name="Set enabled" sid="553241726612595" type="sprite2sheet">
                     <param id="0" name="State">1</param>
@@ -90,10 +90,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="533063310527754" type="player_gre">
-                    <param id="0" name="Unique ID">1</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="504924433561230" type="player_gre">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="504924433561230" type="player_gre2">
                     <param id="0" name="Instance variable">isDead</param>
                 </condition>
             </conditions>
@@ -102,7 +99,7 @@
                     <param id="0" name="Instance variable">player1_hp</param>
                     <param id="1" name="Value">power1.damage</param>
                 </action>
-                <action id="4" name="Set animation" sid="793971194693333" type="player_gre">
+                <action id="4" name="Set animation" sid="793971194693333" type="player_gre2">
                     <param id="0" name="Animation">power1.animation</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -118,10 +115,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="415739842575686" type="player_gre">
-                    <param id="0" name="Unique ID">1</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="409093266620642" type="player_gre">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="409093266620642" type="player_gre2">
                     <param id="0" name="Instance variable">isDead</param>
                 </condition>
             </conditions>
@@ -130,7 +124,7 @@
                     <param id="0" name="Instance variable">player1_hp</param>
                     <param id="1" name="Value">power2.damage</param>
                 </action>
-                <action id="4" name="Set animation" sid="651911610714523" type="player_gre">
+                <action id="4" name="Set animation" sid="651911610714523" type="player_gre2">
                     <param id="0" name="Animation">power2.animation</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -313,7 +307,7 @@
         <event-block sid="661855690220122">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="575625467620115" type="player_gre">
-                    <param id="0" name="Object">player_gre</param>
+                    <param id="0" name="Object">player_gre2</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="156208721408744" type="player_gre">
                     <param id="0" name="Instance variable">isDead</param>
@@ -360,34 +354,24 @@
                 </event-block>
                 <event-block sid="214883938193244">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="791108153296957" type="player_gre">
-                            <param id="0" name="Unique ID">1</param>
+                        <condition id="2" name="Is playing" sid="909566386870196" type="player_gre2">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="213021480014289">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="909566386870196" type="player_gre">
-                                    <param id="0" name="Animation">&quot;idle&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="277791263607415" type="player_gre">
-                                    <param id="0" name="Animation">&quot;hit&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="764064401559934" type="hit_effect">
-                                    <param id="0" name="Frame number">round(random(0,6))</param>
-                                </action>
-                                <action behavior="Fade" id="0" name="Restart fade" sid="909242073891751" type="hit_effect" />
-                                <action id="-3" name="Set position" sid="440006059296792" type="hit_effect">
-                                    <param id="0" name="X">player_gre.X + round(random(-player_gre.Width*0.1,player_gre.Width*0.1))</param>
-                                    <param id="1" name="Y">player_gre.Y + round(random(-player_gre.Height*0.1,player_gre.Height*0.1))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="4" name="Set animation" sid="277791263607415" type="player_gre2">
+                            <param id="0" name="Animation">&quot;hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="764064401559934" type="hit_effect">
+                            <param id="0" name="Frame number">round(random(0,6))</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="909242073891751" type="hit_effect" />
+                        <action id="-3" name="Set position" sid="440006059296792" type="hit_effect">
+                            <param id="0" name="X">player_gre.X + round(random(-player_gre.Width*0.1,player_gre.Width*0.1))</param>
+                            <param id="1" name="Y">player_gre.Y + round(random(-player_gre.Height*0.1,player_gre.Height*0.1))</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>

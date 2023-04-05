@@ -194,7 +194,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Artboard1Copy" uid="69">
+                <instance type="player_gre_head" uid="69">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

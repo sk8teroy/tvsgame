@@ -3,41 +3,170 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>event_choosePlayers</name>
     <events>
-        <variable constant="0" name="player1_char" sid="325311700572442" static="0" type="number">0</variable>
+        <variable constant="0" name="p2_char" sid="600024900220018" static="0" type="number">0</variable>
+        <variable constant="0" name="p2_char_temp" sid="860222502459461" static="0" type="number">0</variable>
+        <variable constant="0" name="p1_char" sid="325311700572442" static="0" type="number">0</variable>
+        <variable constant="0" name="p1_char_temp" sid="952246382501975" static="0" type="number">0</variable>
+        <event-block sid="105151056895167">
+            <conditions>
+                <condition id="17" name="On tap object" sid="387373610326564" type="Touch">
+                    <param id="0" name="Object">player_gre_head</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="214685360310806">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="619768393136341" type="System">
+                            <param id="0" name="Variable">p1_char</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="409047522672660" type="player_gre">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="808225418501972" type="player_gre2">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="850035330616232" type="System">
+                            <param id="0" name="Variable">p1_char_temp</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="665451119754063" type="player_gre">
+                            <param id="0" name="X">210</param>
+                            <param id="1" name="Y">475</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="326385639064605">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="271700701167728" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="109000167049453">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="567251351069411" type="player_gre" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="923165739394750" type="System">
+                                    <param id="0" name="Variable">p2_char</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="901424037850112" type="player_gre">
+                                    <param id="0" name="X">435</param>
+                                    <param id="1" name="Y">475</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="948947862308470">
             <conditions>
                 <condition id="17" name="On tap object" sid="507477982957041" type="Touch">
-                    <param id="0" name="Object">sprite_font_custom</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="771973713684754" type="sprite_font_custom">
-                    <param id="0" name="Unique ID">40</param>
+                    <param id="0" name="Object">btn_confirm</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="308970042411926" type="System">
-                    <param id="0" name="Variable">player1_char</param>
-                    <param id="1" name="Value">2</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="652831285251989" type="System">
-                    <param id="0" name="Layout">choosePlayer2</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="735654510581594">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="281312801013002" type="System">
+                            <param id="0" name="Variable">p2_char</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="985983240927806" type="sprite_font_custom">
+                            <param id="0" name="Unique ID">46</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="600630072079367" type="System">
+                            <param id="0" name="Variable">p1_char</param>
+                            <param id="1" name="Value">p1_char_temp</param>
+                        </action>
+                        <action id="0" name="Set text" sid="487190194564981" type="sprite_font_custom">
+                            <param id="0" name="Text">&quot;Choose your character - P2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="554984041436298">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="528898494545201" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="164095617435877" type="System">
+                            <param id="0" name="Layout">theStage</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
-        <event-block sid="915686958914856">
+        <event-block sid="984060867347512">
             <conditions>
-                <condition id="17" name="On tap object" sid="161088163949128" type="Touch">
-                    <param id="0" name="Object">blank</param>
+                <condition id="17" name="On tap object" sid="213367284012022" type="Touch">
+                    <param id="0" name="Object">player_gre2_head</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="366678041323805" type="System">
-                    <param id="0" name="Variable">player1_char</param>
-                    <param id="1" name="Value">2</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="308800845733294" type="System">
-                    <param id="0" name="Layout">choosePlayer2</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="243714270843516">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="727959325465587" type="System">
+                            <param id="0" name="Variable">p1_char</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="253590893661800" type="player_gre">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="481440981129495" type="player_gre2">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">1000</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="980614481829581" type="System">
+                            <param id="0" name="Variable">p1_char_temp</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="479695620328943" type="player_gre2">
+                            <param id="0" name="X">210</param>
+                            <param id="1" name="Y">475</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="377263519310093">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="819168244682405" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="519556297763745">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="502243554826035" type="player_gre2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="643681871399025" type="System">
+                                    <param id="0" name="Variable">p2_char</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="792212553820330" type="player_gre2">
+                                    <param id="0" name="X">435</param>
+                                    <param id="1" name="Y">475</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
