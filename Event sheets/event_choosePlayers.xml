@@ -37,7 +37,7 @@
                             <param id="1" name="Value">2</param>
                         </action>
                         <action id="-3" name="Set position" sid="665451119754063" type="player_gre">
-                            <param id="0" name="X">210</param>
+                            <param id="0" name="X">180</param>
                             <param id="1" name="Y">475</param>
                         </action>
                     </actions>
@@ -138,7 +138,7 @@
                             <param id="1" name="Value">4</param>
                         </action>
                         <action id="-3" name="Set position" sid="479695620328943" type="player_gre2">
-                            <param id="0" name="X">210</param>
+                            <param id="0" name="X">180</param>
                             <param id="1" name="Y">475</param>
                         </action>
                     </actions>
@@ -167,6 +167,57 @@
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="282596343769278">
+            <conditions>
+                <condition id="6" name="Is supported" sid="347357330203688" type="WebSocket" />
+            </conditions>
+            <actions>
+                <action id="0" name="Connect" sid="579474878033607" type="WebSocket">
+                    <param id="0" name="URL">&quot;ws://localhost:8085&quot;</param>
+                    <param id="1" name="Protocol (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="366775219405760">
+            <conditions>
+                <condition id="3" name="On message" sid="293423017418811" type="WebSocket" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="300095927111012" type="player_gre2">
+                    <param id="0" name="Animation">&quot;punch&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set text" sid="856142616538743" type="Text">
+                    <param id="0" name="Text">WebSocket.MessageText</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="831889809026031">
+            <conditions>
+                <condition id="2" name="On error" sid="202370448857819" type="WebSocket" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="940961256637056" type="sprite_font_custom">
+                    <param id="0" name="Text">WebSocket.ErrorMsg</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="625064033576416">
+            <conditions>
+                <condition id="1" name="On closed" sid="737916385466530" type="WebSocket" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="635007034875543" type="Text">
+                    <param id="0" name="Text">WebSocket.CloseReason</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="821491405802327">
+            <conditions>
+                <condition id="16" name="On any peer message" sid="176875235490932" type="Multiplayer" />
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

@@ -10,8 +10,11 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>27700</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="C2WebSocket" version="1">WebSocket</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -976,6 +979,15 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Function" sid="667927641492088">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="WebSocket" sid="982969519341855">
+            <plugin id="C2WebSocket" />
+        </object-type>
+        <object-type name="Multiplayer" sid="767732235425319">
+            <plugin id="Multiplayer" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -996,6 +1008,9 @@
         </global-instance>
         <global-instance type="LocalStorage" uid="47" />
         <global-instance type="Keyboard" uid="95" />
+        <global-instance type="Function" uid="22" />
+        <global-instance type="WebSocket" uid="23" />
+        <global-instance type="Multiplayer" uid="25" />
     </global-instances>
     <sounds-folder />
     <music-folder />
